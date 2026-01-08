@@ -12,46 +12,312 @@
     }
 
     .bold {
-      color: darkorange;
+      color: rgb(219, 4, 4);
     }
   </style>
 </head>
 
 <body>
-  <h3 class="titles">* html <b class="bold">HEADING</b> elements. they are important to create a document outline:</h3>
-  <h1>h1, this is h1 heading tags</h1>
-  <h2>h2, this is h1 heading tags</h2>
-  <h3>h3, this is h1 heading tags</h3>
-  <h4>h4, this is h1 heading tags</h4>
-  <h5>h5, this is h1 heading tags</h5>
-  <h6>h6, this is h1 heading tags</h6>
+  <section>
+    <h3 class="titles">* html <b class="bold">HEADING: </b> h1, h2, h3, h4, h5, h6</h3>
+    <h1>h1, this is h1 heading tags</h1>
+    <h2>h2, this is h1 heading tags</h2>
+    <h3>h3, this is h1 heading tags</h3>
+    <h4>h4, this is h1 heading tags</h4>
+    <h5>h5, this is h1 heading tags</h5>
+    <h6>h6, this is h1 heading tags</h6>
+  </section>
 
-  <h3 class="titles">* html <b class="bold">PARAGRAPH</b> element. define document paragraph:</h3>
-  <p>p, the paragraph element of document</p>
+  <section>
+    <h3 class="titles">* html <b class="bold">PARAGRAPH: </b> p</h3>
+    <p>p, the paragraph element of document</p>
+  </section>
 
-  <h3 class="titles">list <b class="bold">ul, ol, dl</b> elements:</h3>
-  <b class="bold">ul, un-order:</b>
-  <ul>
-    <li>Dates</li>
-    <li>Apple</li>
-    <li>Orange</li>
-  </ul>
+  <section>
+    <h3 class="titles">* html <b class="bold">LIST: </b> ul, ol, dl</h3>
+    <b class="bold">ul, un-order:</b>
+    <ul>
+      <li>Dates</li>
+      <li>Apple</li>
+      <li>Orange</li>
+    </ul>
 
-  <b class="bold">ol, order:</b>
-  <ol>
-    <li>Dates</li>
-    <li>Apple </li>
-    <li>Orange</li>
-  </ol>
-  <b class="bold">dl, definition:</b>
-  <dl>
-    <dt>HTML</dt>
-    <dd>Hyper Text Markup Language.</dd>
-    <dt>CSS</dt>
-    <dd>Cascading Style Sheet.</dd>
-  </dl>
+    <b class="bold">ol, order:</b>
+    <ol>
+      <li>Dates</li>
+      <li>Apple </li>
+      <li>Orange</li>
+    </ol>
+    <b class="bold">dl, definition:</b>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Hyper Text Markup Language.</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheet.</dd>
+    </dl>
+  </section>
 
-  <h3 class="titles"><b class="bold"></b></h3>
+  <section>
+    <h3 class="titles">* html <b class="bold">HYPERLINKS: </b>a</h3>
+    <a href="https://www.youtube.com/@Hefezsharifulislam/playlists" target="_blank" rel="noopener"
+      title="হাফেজ মোঃ-শরিফুল ইসলাম, কোরআন মাজিদ শিক্ষক">মোঃ-শরিফুল ইসলাম</a>
+
+    <a href="" target="" rel="" title=""></a>
+  </section>
+
+  <section>
+    <h3 class="titles">* html <b class="bold">IMAGE: </b> img</h3>
+    <img
+      src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?_gl=1*10evxwc*_ga*NjIxNDE0MDk1LjE3Njc3MjY0NDI.*_ga_8JE65Q40S6*czE3Njc3MjY0NDEkbzEkZzAkdDE3Njc3MjY0NDckajU0JGwwJGgw"
+      alt="a horse" width="350" height="200" title="a horse in a green forest">
+
+    <img
+      src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?_gl=1*10evxwc*_ga*NjIxNDE0MDk1LjE3Njc3MjY0NDI.*_ga_8JE65Q40S6*czE3Njc3MjY0NDEkbzEkZzAkdDE3Njc3MjY0NDckajU0JGwwJGgw"
+      width="350" height="200" alt="Description of the image" usemap="#image-map-name">
+
+    <map name="image-map-name">
+      <!-- Define clickable areas here -->
+      <area shape="rect" coords="x1,y1,x2,y2,x3,y3" href="link-destination-1.html" alt="Description of area 1">
+      <area shape="circle" coords="x_center,y_center,radius" href="link-destination-2.html" alt="Description of area 2">
+      <area shape="poly" coords="50,172,333,250,330,240,290,180" href="link-destination-3.html"
+        alt="Description of area 3">
+    </map>
+
+  </section>
+
+  <section>
+    <h3 class="titles">* html <b class="bold">FIGURE: </b>figure, figcaption</h3>
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?_gl=1*10evxwc*_ga*NjIxNDE0MDk1LjE3Njc3MjY0NDI.*_ga_8JE65Q40S6*czE3Njc3MjY0NDEkbzEkZzAkdDE3Njc3MjY0NDckajU0JGwwJGgw"
+        alt="a horse" width="350" height="200">
+      <figcaption>Fig.1: <em>A horse in a forest!</em></figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h3 class="titles">* html <b class="bold">SELECTOR: </b> id, class</h3>
+
+    <section id="only-one">id selector, only one named id in one pages</section>
+    <section class="multiple">class selector. multiple class in one name supported.</section>
+  </section>
+
+  <section>
+    <h3 class="titles">* html <b class="bold">TABLE: </b>table, tr, th, td, caption, thead, tbody, tfoot</h3>
+    <table border="1">
+      <caption>Examples Table Captions</caption>
+      <colgroup>
+        <col style="background-color: #ff7676;">
+        <col span="0" style="background-color: #34ffe4;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>id's</th>
+          <th>Sales</th>
+          <th>room</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Jan</td>
+          <td>125584</td>
+          <td>$1000</td>
+          <td>A-15</td>
+        </tr>
+        <tr>
+          <td>Feb</td>
+          <td>154448</td>
+          <td>$1080</td>
+          <td>B-01</td>
+        </tr>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>sum</td>
+          <td colspan="3" rowspan="0">$2080</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h3 class="titles">* html<b class="bold"> FORM: </b>input</h3>
+
+    <form action="https:www.demo.com/..." method="POST" name="data-post" target="_self">
+      <fieldset>
+        <legend>Demo Form!</legend>
+        <section>
+          <label for="first-name">First Name: </label>
+          <input type="text" name="first-name" id="first-name" placeholder="first name" pattern="[A-Za-z]{4,10}"
+            required title="user first name" autofocus value="">
+        </section>
+        <br>
+        <section>
+          <label for="last-name">Last Name: </label>
+          <input type="text" name="last-name" id="last-name" placeholder="last name" pattern="[A-Za-z]{4,10}" required
+            title="user last name" value="">
+        </section>
+        <br>
+        <section>
+          <label for="email">Email/@: </label>
+          <input type="email" name="email" id="email" required placeholder="example@gmail.com" pattern="[A-Za-z]{4,10}"
+            required title="user email needed" value="">
+        </section>
+        <br>
+        <section>
+          <label for="password">Create Password: </label>
+          <input type="password" name="password" id="password" placeholder="password" pattern="" required
+            title="user password needed" value="" minlength="6">
+        </section>
+        <br>
+        <section>
+          <div>
+            <p>Select your favorite vehicles: </p>
+
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+            <label for="vehicle1">I have a bike</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+            <label for="vehicle2">I have a car</label>
+          </div>
+          <div>
+
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" checked />
+            <label for="vehicle3">I have a boat</label>
+          </div>
+        </section>
+        <br>
+        <section>
+          <p>skills you know: </p>
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label>
+        </section>
+        <br>
+        <section>
+          <label for="user_file">Upload a file:</label>
+          <input type="file" id="user_file" name="user_file" accept=".jpg, .png, .pdf">
+        </section>
+        <br>
+        <section>
+          <label for="start_date">Start Date:</label>
+          <input type="date" id="start_date" name="start_date" value="2025-08-23">
+        </section>
+        <br>
+        <section>
+          <label for="appt_time">Appointment Time (datetime-local):</label>
+          <input type="datetime-local" id="appt_time" name="appt_time">
+        </section>
+        <br>
+        <section>
+          <label for="timing">Timing: </label>
+          <input type="time" name="timing" id="timing" value="12:34">
+        </section>
+        <br>
+        <section>
+          <label for="week">Week: </label>
+          <input type="week" name="week" id="week">
+        </section>
+        <br>
+        <section>
+          <label for="Month">Month: </label>
+          <input type="month" name="month" id="month">
+        </section>
+        <br>
+        <section>
+          <label for="color_picker">Pick A Color: </label>
+          <input type="color" id="color_picker" name="color_picker" value="#ff0000">
+        </section>
+        <br>
+        <section>
+          <label for="button-input">Button Input: </label>
+          <input type="button" name="button-input" id="button-input" value="Input Button">
+        </section>
+        <br>
+        <section>
+          <label for="price">Price (up to two decimal places):</label>
+          <input type="number" id="price" name="price" min="0" step="0.01">
+
+          <label for="odd_number">Odd Number (1 to 10):</label>
+          <input type="number" id="odd_number" name="odd_number" min="1" max="10" step="2">
+
+        </section>
+        <br>
+
+        <section>
+          <label for="volume">volume: </label>
+          <input type="range" name="volume" id="volume" min="0" max="100" step="1" value="50">
+          <output for="volume" oninput="this.value = volume.value ">50</output>
+        </section>
+        <br>
+        <section>
+          <label for="website">website: </label>
+          <input type="url" name="website" id="website" placeholder="https://example.com">
+        </section>
+        <br>
+        <section>
+          <label for="site-search">Search the site:</label>
+          <input type="search" id="site-search" name="q" />
+          <button>Search</button>
+        </section>
+        <br>
+        <section>
+          <input type="hidden">this is hidden type input
+        </section>
+        <br>
+        <section>
+          <label for="phone">Phone: </label>
+          <input type="tel" name="telephone" id="phone" placeholder="e.g., +880-1640677525">
+
+        </section>
+        <br>
+        <fieldset>
+          <legend>Selections & Preferences</legend>
+          <section>
+            <label for="ice_cream_choice">Choose a flavor:</label>
+            <input list="ice_cream_flavors" id="ice_cream_choice" name="ice_cream_choice" placeholder="select one...">
+            <datalist id="ice_cream_flavors">
+              <option value="Chocolate">
+              <option value="Vanilla">
+              <option value="Strawberry">
+              <option value="Mint Chocolate Chip">
+            </datalist>
+          </section>
+          <br>
+          <section>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message here..." required></textarea>
+          </section>
+        </fieldset>
+        <br>
+        <section>
+          <input type="submit" name="submit" value="submit input">
+          <input type="reset" name="reset" value="reset input">
+        </section>
+        <br>
+        <section>
+          <button type="submit">Submit btn</button>
+          <button type="reset">Reset btn</button>
+        </section>
+        <br>
+      </fieldset>
+    </form>
+
+  </section>
+
+  <section>
+    <h3 class="titles"><b class="bold"></b></h3>
+  </section>
+
 
 
 
