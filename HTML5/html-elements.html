@@ -69,7 +69,7 @@
     <h3 class="titles">* html <b class="bold">IMAGE: </b> img</h3>
     <img
       src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?_gl=1*10evxwc*_ga*NjIxNDE0MDk1LjE3Njc3MjY0NDI.*_ga_8JE65Q40S6*czE3Njc3MjY0NDEkbzEkZzAkdDE3Njc3MjY0NDckajU0JGwwJGgw"
-      alt="a horse" width="350" height="200" title="a horse in a green forest">
+      alt="a horse" width="350" height="200" title="a horse in a green forest" loading="lazy">
 
     <img
       src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?_gl=1*10evxwc*_ga*NjIxNDE0MDk1LjE3Njc3MjY0NDI.*_ga_8JE65Q40S6*czE3Njc3MjY0NDEkbzEkZzAkdDE3Njc3MjY0NDckajU0JGwwJGgw"
@@ -90,7 +90,7 @@
     <figure>
       <img
         src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?_gl=1*10evxwc*_ga*NjIxNDE0MDk1LjE3Njc3MjY0NDI.*_ga_8JE65Q40S6*czE3Njc3MjY0NDEkbzEkZzAkdDE3Njc3MjY0NDckajU0JGwwJGgw"
-        alt="a horse" width="350" height="200">
+        alt="a horse" width="350" height="200" loading="lazy">
       <figcaption>Fig.1: <em>A horse in a forest!</em></figcaption>
     </figure>
   </section>
@@ -146,7 +146,7 @@
   <section>
     <h3 class="titles">* html<b class="bold"> FORM: </b>input</h3>
 
-    <form action="https:www.demo.com/..." method="POST" name="data-post" target="_self">
+    <form action="https:www.demo.com/..." method="POST" enctype="multipart/form-data" name="data-post" target="_self">
       <fieldset>
         <legend>Demo Form!</legend>
         <section>
@@ -288,7 +288,7 @@
             <datalist id="ice_cream_flavors">
               <option value="Chocolate">
               <option value="Vanilla">
-              <option value="Strawberry">
+              <option value="Strawberry" selected>
               <option value="Mint Chocolate Chip">
             </datalist>
           </section>
@@ -311,12 +311,59 @@
         <br>
       </fieldset>
     </form>
-
   </section>
 
   <section>
-    <h3 class="titles"><b class="bold"></b></h3>
+    <h3 class="titles">* html <b class="bold">AUDIO: </b>audio</h3>
+
+    <!-- audio- tag two attributes: muted, loop. -->
+    <audio controls autoplay preload="audio">
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+      <track src="captions_en.vtt" kind="captions" srclang="en" label="English Captions" default>
+      <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Spanish Subtitles">
+    </audio>
   </section>
+
+  <section>
+    <h3 class="titles">* html <b class="bold">VIDEO: </b>video</h3>
+
+    <!-- video- tag two attributes: muted, loop. -->
+    <video width="420" height="240" controls autoplay
+      poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQccFoDmiygeLdZDfaxL6kwhi9CK5GOaaQtew&s">
+      <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+      <track src="captions_en.vtt" kind="captions" srclang="en" label="English Captions" default>
+      <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Spanish Subtitles">
+    </video>
+  </section>
+
+  <section>
+    <h3 class="titles">* html<b class="bold">IFRAME: </b>iframe</h3>
+
+    <iframe width="315" height="576" src="https://www.youtube.com/embed/jIer02GuuK8" loading="lazy"
+      title="beautiful nature  status 🌹 nature whatsapp status 🏵️" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h3 class="titles">* html<b class="bold">ARIA: </b>aria-label</h3>
+    <!-- use aria for disable peoples to understand -->
+    <button aria-label="Close dialog">X</button>
+  </section>
+
+  <section>
+    <h3 class="titles">* Core html<b class="bold"> Document Structure: </b>HTML5 </h3>
+
+    <a href="https://github.com/anwarosyidi/100-interview-questions/blob/master/html.md">Core part is question 75 to
+      start</a>
+  </section>
+
+  <section>
+    <h3 class="titles">* html<b class="bold"></b></h3>
+  </section>
+
+
 
 
 

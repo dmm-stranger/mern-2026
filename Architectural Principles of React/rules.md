@@ -1,5 +1,7 @@
 # 1. Clean Component Hierarchy (Production-Ready)::
+
 ## 📁 Recommended Folder Structure:
+
 ```
 src/
 │
@@ -50,7 +52,9 @@ src/
 ```
 
 # 2. High-Performance Layout Pattern (No Over-Rendering)::
+
 ## Bad Pattern (Re-renders everything):
+
 ```
 // Bad Pattern_:
 <App>
@@ -107,7 +111,9 @@ const handleClick = useCallback(() => {
 ```
 
 # 3. Design System — The Correct Way::
-## Rule_ Design system components are primitive + reusable:
+
+## Rule\_ Design system components are primitive + reusable:
+
 ```
 // Example: Button Component (Correct) or look MUI components:
 import { cn } from "@/utils/cn";
@@ -195,7 +201,9 @@ export function Card({ children }: { children: React.ReactNode }) {
 ```
 
 # 4. React Reconciliation — Visual Explanation::
+
 ## What React actually does:
+
 ```
 // Only the changed subtree updates:
 Previous Virtual DOM
@@ -206,7 +214,9 @@ Minimal DOM Updates
 ```
 
 # 5. Performance Issus::
+
 ## Why too many components hurt performance:
+
 ```
 // Each = a function call:
 // Each = reconciliation cost:
@@ -227,6 +237,7 @@ Minimal DOM Updates
 ```
 
 # 6. Final Golden Rules (Memorize These)::
+
 ```
 ✅ Use native HTML tags freely
 ✅ Create components for behavior or reuse
@@ -236,6 +247,7 @@ Minimal DOM Updates
 ```
 
 # 7. Chat-GPT Prompt::
+
 ```
 // Structured, role-based, step-by-step prompts:
 Prompt 1 → Architecture
@@ -278,4 +290,25 @@ Requirements:
 8. Production-ready code
 
 Explain architecture first, then implement step-by-step with code.
+```
+
+# 1. What are some best practices for writing clean and maintainable HTML?::
+
+```
+Use Semantic HTML: Choose tags that accurately describe the content.
+
+Validate Your HTML: Use tools like the W3C Validator.
+
+Proper Indentation and Formatting: Makes code easier to read.
+Use alt Text for Images.
+
+Keep CSS and JavaScript Separate: Link external files rather than using excessive inline styles or scripts.
+
+Minimize Nesting of divs: Use semantic elements where possible.
+Write Comments for Complex Sections.
+
+Follow: a Consistent Naming Convention for ids and classes.
+Ensure Accessibility.
+
+Use lowercase for tags and attributes.
 ```
