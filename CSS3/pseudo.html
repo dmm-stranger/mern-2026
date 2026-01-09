@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/pseudo.css">
+  <title>pseudo classes and elements</title>
+</head>
+
+<body>
+  <section>
+    <!-- :hover, :active, :focus, :visited -->
+    <a href="https://www.youtube.com" target="_blank">visit youtube</a>
+  </section>
+
+  <section>
+    <!-- :nth-child(n), :first-child, :last-child -->
+    <ul>
+      <li>list items 1</li>
+      <li>list items 2</li>
+      <li>list items 3</li>
+      <li>list items 4</li>
+      <li>list items 5</li>
+      <li>list items 6</li>
+      <li>list items 7</li>
+    </ul>
+  </section>
+
+  <section>
+    <!-- :disabled, :checked -->
+    <form>
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name">
+      <br>
+      <label for="password">password: </label>
+      <input disabled type="password" name="password" id="password">
+      <br>
+      <input checked type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+      <label for="subscribeNews">Subscribe to our newsletter?</label>
+    </form>
+  </section>
+
+  <section>
+    <p class="pseudo-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, saepe commodi voluptates
+      tempora voluptatibus sint excepturi at obcaecati laudantium ipsa. Exercitationem consectetur eveniet voluptatem
+      hic iusto laudantium, voluptate consequuntur cumque.</p>
+
+    <input type="text" name="userName" placeholder="your full name here!">
+  </section>
+</body>
+
+</html>

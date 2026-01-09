@@ -1,0 +1,54 @@
+/* universal selectors */
+*,  *:before, *:after {
+  box-sizing: border-box;
+}
+
+.external {
+  font-size: 50px;
+  background-color: pink;
+  color: red;
+}
+
+/* element selectors */
+h5 {
+  padding: 5px;
+  background-color: #2b2b2b;
+  color: tomato;
+  border-radius: 5px;
+}
+
+/* id selector  */
+#myId {
+  font-size: 30px;
+  font-style: italic;
+  color: red;
+}
+
+/* class selector */
+.class-selector{
+  font-weight: bolder;
+  color: #3b3b9b;
+  font-size: 40px;
+}
+
+/* attribute selector  */
+input[type="text"]{
+  width: 300px;
+  background-color: black;
+  padding: 5px;
+  color: pink;
+}
+
+/* descendant selectors  */
+div ul{
+list-style: none;
+font-weight: bold;
+color: red;
+}
+
+/* child selector */
+li > a {
+  color: darkgreen;
+  font-size: 20px;
+  text-decoration: none;
+}

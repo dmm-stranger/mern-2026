@@ -1,0 +1,79 @@
+a{
+  font-size: 20px;
+}
+
+a:hover{
+  color: tomato;
+}
+
+a:focus{
+  color: greenyellow;
+}
+
+a:active{
+  color: darkgreen;
+}
+a:visited{
+  color: red;
+}
+
+/* others */
+li:nth-child(2n-1){
+  color: red;
+}
+
+li:first-child{
+  list-style: none;
+  font-size: 25px;
+}
+
+li:last-child{
+  color: green;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+
+/* :disabled, :checked */
+input:disabled {
+background-color: red;
+}
+
+input:disabled:hover {
+    background-color: initial;
+}
+
+  input[type="checkbox"]:checked + label {
+    color: green;
+    font-weight: bold;
+  }
+
+  /* ::before, ::after, ::first-line, ::first-latter, ::selection, ::placeholder */
+
+ .pseudo-element::before{
+content: '"';
+font-size: 80px;
+color: green;
+font-weight: bold;
+ }
+
+  .pseudo-element::after{
+content: '"';
+font-size: 70px;
+color: tomato;
+font-weight: bolder
+ }
+
+ .pseudo-element::first-line{
+  font-size: 25px;
+ }
+
+ .pseudo-element::first-letter{
+  font-weight: bolder;
+  font-size: 70px;
+ }
+
+::placeholder{
+  color: red;
+  opacity: 30%;
+}
