@@ -312,3 +312,48 @@ Ensure Accessibility.
 
 Use lowercase for tags and attributes.
 ```
+
+# 6. FlexBox && Grid::
+
+```
+// Flex Parent:
+  display: flex, inline-flex ;
+  flex-direction: column, column-reverse, row, row-reverse ;
+  flex-wrap: wrap, no-wrap ;
+  flex-flow: <flex-direction>, <flex-wrap> ;
+  justify-content: flex-[start, end], center, space-[between, around, evenly] ;
+  align-items: flex-[start, end], center, baseline ;
+  align-content: stretch, flex-[start, end], center, space-[between, around, evenly] ;
+  gap/ row-gap/ column-gap: 10px ;
+
+// Flex Child:
+  order: 0, 1 ;
+  flex-grow: 0, 1 ;
+  flex-shrink: 1, 0 ;
+  flex-basis: <width>, <height> ;
+  flex: <flex-grow>, <flex-shrink>, <flex-basis> ;
+  align-self: <override the Parent containers [align-items] > ;
+
+// Grid Parent:
+  display: grid, inline-grid ;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas: ;
+  gap/ row-gap/ column-gap: 10px ;
+  grid-auto-flow: row, column ;
+  justify-content: ;
+  align-content: ;
+  justify-items: ;
+  align-items: ;
+  grid-template-rows/ grid-template-columns/ grid-auto-flow: ;
+
+
+// Grid Child:
+  grid-column-start/ grid-column-end: ;
+  grid-row-start/ grid-row-end: ;
+  grid-column: <grid-column-start>, <grid-column-end> ;
+  grid-row: <grid-row-start>, <grid-row-end> ;
+  grid-area: ;
+  justify-self: ;
+  align-self: ;
+```

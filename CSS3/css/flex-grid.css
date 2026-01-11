@@ -1,0 +1,69 @@
+.flex {
+	background-color: lightsalmon;
+	padding: 20px;
+	margin-bottom: 20px;
+	height: 30vh;
+	min-width: 100%;
+	/* flex, inline-flex */
+	display: flex;
+	/* flex-direction: column; row, row-reverse, column, column-reverse */
+	/* flex-wrap: wrap; no-wrap, wrap */
+	flex-flow: row wrap;
+	/* justify-content: center; flex-start, flex-end, center, space-between, space-around, space-evenly */
+	/* align-items: stretch ; baseline , flex-start, flex-end, baseline*/
+	/* align-content: space-between ; stretch, flex-start, flex-end, center, space-between, space-around, space-evenly */
+	gap: 5px;
+}
+
+.main {
+	width: 50px;
+	height: 50px;
+	background-color: green;
+}
+
+.loli {
+	order: 1;
+	/* flex-grow: 1; */
+	/* flex-shrink: 5; */
+	/* flex-basis: 30%; */
+	align-self: center;
+	display: flex;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	/* grid-template-rows: 1fr 2fr 100px; */
+	/* grid-template-rows: auto 50px;        2 rows: auto height, 50px height */
+	background-color: lightblue;
+	padding: 20px;
+	margin-bottom: 20px;
+	height: 30vh;
+	min-width: 100%;
+}
+
+.chain {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+
+	/* grid-column-start: 1;
+	grid-column-end: 3;
+	/* Spans from line 1 to line 3 (i.e., 2 columns) */
+	/* grid-row: 2 / 4;
+	Spans from row line 2 to row line 4 */
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'header header header header'
+		'sidebar main main main'
+		'footer footer footer footer';
+    gap: 2px;
+    /* gap, row-gap, column-gap */
+}
+.item-header { grid-area: header; background-color: tomato; padding: 5px;}
+.item-sidebar { grid-area: sidebar; background-color: blue; padding: 5px;}
+.item-main { grid-area: main; background-color:aquamarine ;padding: 5px;}
+.item-footer { grid-area: footer; background-color: #2b2b2b; padding: 5px;}
