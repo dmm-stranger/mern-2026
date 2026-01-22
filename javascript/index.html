@@ -7,6 +7,7 @@
   <meta name="description" content="HTML5, CSS3, JavaScript practice project." />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Portfolio</title>
+
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <style type="text/tailwindcss">
     @theme {
@@ -17,25 +18,128 @@
 
 <body>
   <!-- page Header: -->
-  <header>
+  <header class="grid grid-cols-12">
+    <section class="col-span-2 content-center text-center bg-red-100">
+      <!-- page Header logo: -->
+      Future Imperfect
+    </section>
+
     <!-- page Header Nav/Navbar: -->
-    <nav>
-      <h1 class="text-xl font-bold text-clifford">
-        Page Nav/Navbar (TailwindCss via CDN)
-      </h1>
+    <nav class="col-span-9 bg-red-200 content-center">
+      <ul class="flex gap-3 my-3 uppercase">
+        <li class="border-e border-slate-400 px-3">
+          <a href="#home">Home</a>
+        </li>
+        <li class="border-e border-slate-400 px-3">
+          <a href="#about">About</a>
+        </li>
+        <li class="border-e border-slate-400 px-3">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="border-e border-slate-400 px-3">
+          <a href="#blog">Blog</a>
+        </li>
+        <li class="border-e border-slate-400 px-3">
+          <a href="#page">page</a>
+        </li>
+      </ul>
     </nav>
+
+    <!-- page Header Section: -->
+    <section class="col-span-1 grid grid-cols-2 justify-center items-center text-blue-600 bg-red-300">
+      <img src="./files/icons/search.svg" fill="bg-blue-700" width="26" alt="search-icon" />
+      <img src="./files/icons/burger.svg" width="26" alt="manu-burger-icon" />
+    </section>
   </header>
   <!-- page Main: -->
-  <main>
+  <main class="grid grid-cols-12 gap-x-10 justify-evenly">
     <!-- page Main section: -->
-    <section>main section!</section>
+    <section class="col-span-4 content-start bg-green-100 min-h-screen">
+      <section class="bg-blue-100 my-24 px-12 grid grid-rows-12 gap-y-12">
+        <section class="row-span-4 bg-yellow-200">
+          <img src="https://html5up.net/uploads/demos/future-imperfect/images/logo.jpg" alt="">
+          <h1 class="text-bold text-5xl uppercase">Future Imperfect</h1>
+          <p class="text-xl text-slate-500">Another fine responsive site template by HTML5 UP</p>
+        </section>
+
+        <section class="row-span-8 bg-yellow-300">
+          <!-- aside medium card: 1 -->
+          <section class="max-w-sm rounded overflow-hidden shadow-lg bg-pink-300">
+            <img class="w-full" src="https://html5up.net/uploads/demos/future-imperfect/images/pic04.jpg"
+              alt="Sunset in the mountains">
+            <section class="px-6 py-4">
+              <section class="font-bold text-xl mb-2">The Coldest Sunset</section>
+              <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
+            </section>
+            <section class="px-6 pt-4 pb-2">
+              <figure>
+                <h3 class="text-xl text-bold">Vitae sed condimentum</h3>
+                <span>lorem ipsum</span>
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                  class="inline-block size-8 rounded-full ring-2 ring-white outline -outline-offset-1 outline-black/5" />
+              </figure>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
 
     <!-- page Main Aside: -->
-    <aside>page aside!</aside>
+    <aside class="col-span-8 content-start bg-green-200 min-h-screen my-24 grid grid-rows-12">
+      <!-- Aside large card: 1 -->
+      <section class="row-span-4 bg-pink-200 grid grid-cols-12 p-5">
+        <section class="col-span-8 bg-turque-200">
+          <h1 class="text-2xl">Magna sed adipiscing</h1>
+          <p class="text-lg">Lorem ipsum dolor amet nullam consequat etiam feugiat</>
+        </section>
+        <section class="col-span-4 bg-red-300">
+          <p class="text-lg">lorem text <span class="text-xs">26/11/2025</span></p>
+          <figure>
+            <span>Dulon Mahadi </span>
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt=""
+              class="inline-block size-8 rounded-full ring-2 ring-white outline -outline-offset-1 outline-black/5" />
+          </figure>
+        </section>
+      </section>
+
+      <section class="row-span-8 bg-red-100 px-12">
+        <div class="max-w-screen rounded overflow-hidden shadow-lg">
+          <img class="w-full" src="https://html5up.net/uploads/demos/future-imperfect/images/pic01.jpg"
+            alt="Sunset in the mountains">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+            <p class="text-gray-700 text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
+              eaque,
+              exercitationem praesentium nihil.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
+              eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2 flex">
+            <button class="text-xl px-5 py-2 border-1 ring-2 rounded-sm cursor-pointer">continue reading...</button>
+            <span class="uppercase">general</span>
+            <span>
+              <img src="./files/icons/love.svg" width="18" alt="">
+            </span>
+            <span>
+              <img src="./files/icons/chat.svg" width="18" alt="">
+            </span>
+          </div>
+        </div>
+      </section>
+    </aside>
+
   </main>
 
   <!-- page Footer: -->
-  <footer>footer here!</footer>
+  <footer class="py-24 px-12 bg-pink-100">footer here!</footer>
 </body>
 
 </html>

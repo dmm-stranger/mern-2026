@@ -5,5 +5,6 @@
 ```
 1. Page Layout Design using HTML5 semantic elements. (Header, Main[Section, Aside], Footer).
 2. install TailwindCss via CDN.
+3. design Header, Main, and Footer portion. (sketch only)
 
 ```
