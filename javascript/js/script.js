@@ -208,5 +208,72 @@ console.log(milon);
 const emptyArr = new Array(5);
 console.log(emptyArr);
 
-const pop = 2;
-console.log(Array.from(pop));
+// Array of:
+const manage2 = Array.of(1, 2, 3, 4, 4, 5);
+console.log(manage2);
+
+// Array from:
+const str = 'Dulon Mahadi';
+const newStr = Array.from(str);
+console.log(newStr);
+
+// forEach:
+manage2.forEach((num, index, arr) => console.log(num * 2));
+// filter, map, reduce ...
+
+// array destruction:
+const sealery = [1544, 2566, 4587, 1252, 6659, 4485];
+
+const [first, last] = sealery; // basic destruction
+console.log(first, last);
+
+const [, , third] = sealery; // empty destruction
+console.log(third);
+
+const [one, two, ...rest] = sealery; // rest of destruction
+console.log(one, two, rest);
+
+// Object destruction:
+const personMan = {
+	firstName: 'John',
+	lastName: 'Doe',
+	age: 30,
+	address: {
+		city: 'New York',
+		country: 'USA',
+	},
+};
+
+const { firstName } = personMan; // basic destruction
+console.log(firstName);
+
+const { lastName: sureName } = personMan; // assigning to new variable named destruction
+console.log(sureName);
+
+const {
+	// nested destruction
+	address: { country },
+} = personMan;
+console.log(country);
+
+const { middleName = 'empty' } = personMan; // default destruction
+console.log(middleName);
+
+// Map ans Set object:
+const mySet = new Set([1, 2, 3, 4, 'hello', 'mello']); // Set
+console.log(mySet);
+
+mySet.add(5);
+console.log(mySet);
+console.log(mySet.has(5));
+true;
+console.log(mySet.has(6));
+
+const myMap = new Map();
+console.log(myMap);
+myMap.set('name', 'alice');
+console.log(myMap);
+// myMap.set(keyObj, 'An object key');
+
+console.log(myMap.get('name')); // Alice
+// console.log(myMap.get(keyObj)); // An object key
