@@ -312,3 +312,256 @@ Ensure Accessibility.
 
 Use lowercase for tags and attributes.
 ```
+
+# JavaScript:
+```
+1. Q: What is a closure? Give an example and a use case. A: A closure is a function that has access to its own scope, the scope of the outer function, and the global scope. Essentially, a closure "remembers" the environment (variables) in which it was created, even after the outer function has finished executing.
+
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log("Outer variable: " + outerVariable);
+        console.log("Inner variable: " + innerVariable);
+    };
+}
+
+const newFunction = outerFunction("outside");
+newFunction("inside");
+// Output:
+// Outer variable: outside
+// Inner variable: inside
+Use Cases:
+
+Data Encapsulation / Private Variables: Creating private variables that can only be accessed through specific methods.
+Callbacks and Event Handlers: Maintaining state in asynchronous operations.
+Currying and Partial Application.
+Module Pattern.
+
+2. Q: What are higher-order functions? A: Higher-order functions are functions that either:
+
+Take one or more functions as arguments.
+Return a function as their result. Examples include map, filter, reduce, setTimeout, and functions that return other functions (like in closures or currying).
+
+3. Q: What is an IIFE (Immediately Invoked Function Expression)? Why use it? A: An IIFE is a JavaScript function that runs as soon as it is defined.
+
+(function() {
+    console.log("IIFE executed!");
+    var localScopedVar = "I am local";
+})();
+
+4. Q: What is function currying? A: Currying is a technique of transforming a function that takes multiple arguments into a sequence of functions, each taking a single argument. Each function returns another function until all arguments are supplied, at which point the final result is returned.
+
+function add(a) {
+    return function(b) {
+        return function(c) {
+            return a + b + c;
+        };
+    };
+}
+console.log(add(1)(2)(3)); // 6
+
+5. Q: What is recursion? Give an example. A: Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. A recursive function must have a base case to stop the recursion and prevent an infinite loop (stack overflow).
+
+// Factorial example
+function factorial(n) {
+    if (n === 0 || n === 1) { // Base case
+        return 1;
+    } else { // Recursive step
+        return n * factorial(n - 1);
+    }
+}
+console.log(factorial(5)); // 120
+
+6. Q: What is a callback function? A: A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Callbacks are fundamental to asynchronous programming in JavaScript.
+
+function processData(data, callback) {
+    // ... processing data ...
+    const result = data.toUpperCase();
+    callback(result);
+}
+processData("hello", function(processedResult) {
+    console.log("Processed: " + processedResult); // Processed: HELLO
+});
+//
+function sayHello() {
+  console.log("Hello");
+}
+
+function greet(fn) {
+  fn(); // calling the function
+}
+greet(sayHello);
+//
+function greet(callback) {
+  callback("Dulon");
+}
+
+function showName(name) {
+  console.log("Hello " + name);
+}
+greet(showName);
+
+7. Q: How do you iterate over an object's properties? A:
+
+for...in loop: Iterates over enumerable property names (keys), including inherited ones. Use hasOwnProperty to check for own properties.
+const obj = { a: 1, b: 2 };
+for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+        console.log(key, obj[key]);
+    }
+}
+
+Object.keys(obj).forEach(key => console.log(key, obj[key]));
+Object.values(obj).forEach(value => console.log(value));
+Object.entries(obj).forEach(([key, value]) => console.log(key, value));
+
+console.log(obj.hasOwnProperty(name))
+
+8. Q: How do you create an array in JavaScript? A:
+
+Array Literal:
+const fruits = ["Apple", "Banana", "Cherry"];
+
+new Array() Constructor:
+const numbers = new Array(1, 2, 3);
+const emptyArr = new Array(5); // Creates an array with 5 empty slots
+---
+Array.from(): Creates a new array instance from an array-like or iterable object.
+Array.of(): Creates a new array instance with a variable number of arguments, regardless of number or type.
+
+const str = "JavaScript";
+const charArray = Array.from(str);
+console.log(charArray);
+// Output: ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
+
+// Assume document.querySelectorAll('.item') returns a NodeList of elements
+const elements = document.querySelectorAll('.item');
+const elementArray = Array.from(elements);
+console.log(elementArray);
+// Output: Array of DOM elements
+
+const uniqueNumbers = new Set([1, 2, 2, 3, 3, 4]);
+const numberArray = Array.from(uniqueNumbers);
+console.log(numberArray);
+// Output: [1, 2, 3, 4]
+-
+push(): Adds one or more elements to the end of an array and returns the new length.
+pop(): Removes the last element from an array and returns that element.
+shift(): Removes the first element from an array and returns that element.
+unshift(): Adds one or more elements to the beginning of an array and returns the new length.
+slice(start, end): Returns a shallow copy of a portion of an array into a new array object. Original array is not modified.
+splice(start, deleteCount, ...itemsToAdd): Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. Modifies the original array.
+concat(): Merges two or more arrays. Returns a new array.
+join(separator): Joins all elements of an array into a string.
+indexOf(element): Returns the first index at which a given element can be found, or -1 if not present.
+includes(element): Determines whether an array includes a certain value, returning true or false.
+-
+forEach(callbackFn): Executes a provided function once for each array element. Does not return a new array; its return value is undefined. Primarily used for side effects.
+
+[1, 2, 3].forEach((num, index, arr) => console.log(num * 2)); // Logs 2, 4, 6
+-
+map(callbackFn): Creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+const numbers = [1, 2, 3];
+const doubled = numbers.map((num, index, arr) => num * 2); // doubled is [2, 4, 6]
+-
+filter(callbackFn): Creates a new array with all elements that pass the test implemented by the provided function.
+
+const numbers = [1, 2, 3, 4, 5];
+const evens = numbers.filter((num, index, arr) => num % 2 === 0); // evens is [2, 4]
+-
+reduce(callbackFn, initialValue): Executes a "reducer" function on each element of the array, resulting in a single output value. The reducer function takes an accumulator and the current value as arguments.
+
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0); // sum is 10
+---
+
+9. Q: What is array destructuring?
+// Basic destructuring
+const [first, second] = numbers;
+
+// Skipping elements
+const [, , third] = numbers;
+
+// Using rest operator
+const [one, two, ...rest] = numbers;
+
+10. Q: What is object destructuring?
+// Basic destructuring
+const { firstName, age } = person;
+
+// Assigning to new variable names
+const { lastName: surname } = person;
+
+// Nested destructuring
+const { address: { city } } = person;
+
+// Default values
+const { middleName = "N/A" } = person;
+
+11. Q: What is the spread operator (...)? How is it used with arrays and objects?
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2, 7]; // [1, 2, 3, 4, 5, 6, 7] - Concatenation
+const copy = [...arr1];                 // [1, 2, 3] - Shallow copy
+
+function sum(x, y, z) { return x + y + z; }
+sum(...arr1); // Equivalent to sum(1, 2, 3)
+-
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const merged = { ...obj1, ...obj2 }; // { a: 1, b: 3, c: 4 } (obj2's b overwrites obj1's)
+const cloned = { ...obj1 };           // { a: 1, b: 2 } - Shallow clone
+
+12. Q: How can you check if a variable is an array?
+const arr = [1, 2, 3];
+const obj = { a: 1 };
+console.log(Array.isArray(arr)); // true
+console.log(Array.isArray(obj)); // false
+
+13. Q: What are Object.freeze(), Object.seal(), and Object.preventExtensions()? A:
+
+Object.preventExtensions(obj): Prevents new properties from being added to an object. Existing properties can still be modified or deleted.
+
+Object.seal(obj): Prevents new properties from being added and marks all existing properties as non-configurable (meaning they cannot be deleted, and their descriptors cannot be changed, but their values can still be changed if they are writable).
+
+Object.freeze(obj): Prevents new properties from being added, makes all existing properties non-configurable, and makes all data properties non-writable. The object becomes effectively immutable (at a shallow level; nested objects are not automatically frozen). 
+
+14. Q: What are JavaScript Map and Set objects (ES6)?
+// Set: A collection of unique values of any type. Values in a Set can only occur once.
+
+const mySet = new Set([1, 2, 2, 3, "hello", "hello"]);
+console.log(mySet); // Set(4) { 1, 2, 3, 'hello' }
+mySet.add(4);
+mySet.has(2); // true
+
+// Map: A collection of key-value pairs where keys can be of any data type (unlike object literals where keys are strings or Symbols). Remembers the original insertion order of the keys.
+
+const myMap = new Map();
+const keyObj = {};
+myMap.set("name", "Alice");
+// myMap.set(keyObj, "An object key");
+console.log(myMap.get("name")); // Alice
+// console.log(myMap.get(keyObj)); // An object key
+
+15. Q: How to find an element in an array?
+indexOf(element, fromIndex): Returns the first index of an element, or -1.
+lastIndexOf(element, fromIndex): Returns the last index of an element, or -1.
+includes(element, fromIndex): Returns true if element is found, false otherwise. (ES7)
+find(callbackFn): Returns the value of the first element that satisfies the testing function, or undefined.
+findIndex(callbackFn): Returns the index of the first element that satisfies the testing function, or -1.
+
+16. Q: How to check if an object is empty?
+function isEmptyObject(obj) {
+    if (obj === null || typeof obj !== 'object') return true; // Or handle as an error
+    return Object.keys(obj).length === 0 && obj.constructor === Object;
+}
+
+console.log(isEmptyObject({})); // true
+console.log(isEmptyObject({a:1})); // false
+console.log(isEmptyObject(new Date())); // false (constructor check)
+
+17. 
+
+```
+
