@@ -561,7 +561,35 @@ console.log(isEmptyObject({})); // true
 console.log(isEmptyObject({a:1})); // false
 console.log(isEmptyObject(new Date())); // false (constructor check)
 
-17. 
+17. Q: What is async/await? How does it relate to Promises? 
+// async keyword: Used to declare an asynchronous function. An async function implicitly returns a Promise. If the function returns a value, the Promise will be resolved with that value. If it throws an error, the Promise will be rejected.
+
+// await keyword: Can only be used inside an async function. It pauses the execution of the async function until the Promise it's waiting for is settled (resolved or rejected). If the Promise resolves, await returns the resolved value. If it rejects, await throws the rejection reason (which can be caught with try...catch).
+
+async function fetchDataAsync() {
+    try {
+        console.log("Fetching data...");
+        const data = await fetchData(); // fetchData is the Promise-returning function from above
+        console.log(data);
+        const processedData = data.toUpperCase();
+        console.log("Processed:", processedData);
+        return processedData;
+    } catch (error) {
+        console.error("Error in async function:", error.message);
+        throw error; // Re-throw if needed
+    } finally {
+        console.log("Async fetch operation finished.");
+    }
+}
+fetchDataAsync().then(result => console.log("Final result:", result));
+
+18. Q: Can you explain setTimeout(callback, delay) and setInterval(callback, delay)? A:
+
+setTimeout(callback, delay): Executes a callback function once after a specified delay (in milliseconds). It returns a timeout ID which can be used with clearTimeout() to cancel the timeout.
+
+setInterval(callback, delay): Repeatedly executes a callback function with a fixed delay (in milliseconds) between each call. It returns an interval ID which can be used with clearInterval() to stop the repetitions.
+
+19. 
 
 ```
 
