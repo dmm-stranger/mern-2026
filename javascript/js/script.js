@@ -281,67 +281,106 @@
 // --------------- part 4 ------------------------------
 // ASYNCHRONOUS javascript::
 
-// Promises:
-function fetchData() {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			const success = Math.random() > 0.5;
-			if (success) {
-				resolve('Data fetch successfully!');
-			} else {
-				reject(new Error('failed to fetch data.'));
-			}
-		}, 1000);
-	});
-}
+// // Promises:
+// function fetchData() {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			const success = Math.random() > 0.5;
+// 			if (success) {
+// 				resolve('Data fetch successfully!');
+// 			} else {
+// 				reject(new Error('failed to fetch data.'));
+// 			}
+// 		}, 1000);
+// 	});
+// }
 
-fetchData()
-	.then((data) => {
-		console.log(data);
-		return data.toUpperCase();
-	})
-	.then((process) => {
-		console.log('Processed:', processedData);
-	})
-	.catch((error) => {
-		console.error(error.message); // "Failed to fetch data."
-	})
-	.finally(() => {
-		console.log('Fetch operation finished.');
-	});
+// fetchData()
+// 	.then((data) => {
+// 		console.log(data);
+// 		return data.toUpperCase();
+// 	})
+// 	.then((process) => {
+// 		console.log('Processed:', processedData);
+// 	})
+// 	.catch((error) => {
+// 		console.error(error.message); // "Failed to fetch data."
+// 	})
+// 	.finally(() => {
+// 		console.log('Fetch operation finished.');
+// 	});
 
-// asy...await:
-async function fetchDataAsync() {
-	try {
-		console.log('Fetching data...');
-		const data = await fetchData(); // fetchData is the Promise-returning function from above
-		console.log(data);
-		const processedData = data.toUpperCase();
-		console.log('Processed:', processedData);
-		return processedData;
-	} catch (error) {
-		console.error('Error in async function:', error.message);
-		throw error; // Re-throw if needed
-	} finally {
-		console.log('Async fetch operation finished.');
+// // asy...await:
+// async function fetchDataAsync() {
+// 	try {
+// 		console.log('Fetching data...');
+// 		const data = await fetchData(); // fetchData is the Promise-returning function from above
+// 		console.log(data);
+// 		const processedData = data.toUpperCase();
+// 		console.log('Processed:', processedData);
+// 		return processedData;
+// 	} catch (error) {
+// 		console.error('Error in async function:', error.message);
+// 		throw error; // Re-throw if needed
+// 	} finally {
+// 		console.log('Async fetch operation finished.');
+// 	}
+// }
+// fetchDataAsync().then((result) => console.log('Final result:', result));
+
+// // POST request using fetch:
+// async function postData(url = '', data = {}) {
+// 	const response = await fetch(url, {
+// 		method: POST,
+// 		headers: {
+// 			'content-Type': 'application/json',
+// 		},
+// 		body: JSON.stringify(data),
+// 	});
+// 	if (!response?.ok) {
+// 		throw new Error(`HTTP error status: ${response?.status}`);
+// 	}
+// }
+
+// postData('https://api.example.com/submit', { item: 'test' })
+// 	.then((data) => console.log(data))
+// 	.catch((err) => console.log(err.message));
+
+// --------------- part 5 ------------------------------
+// OOP && PROTOTYPE:
+// Class:
+class Animal {
+	constructor(name) {
+		this.name = name;
+	}
+	speak() {
+		console.log(`${this.name} Makes a Noise.`);
 	}
 }
-fetchDataAsync().then((result) => console.log('Final result:', result));
 
-// POST request using fetch:
-async function postData(url = '', data = {}) {
-	const response = await fetch(url, {
-		method: POST,
-		headers: {
-			'content-Type': 'application/json',
-		},
-		body: JSON.stringify(data),
-	});
-	if (!response?.ok) {
-		throw new Error(`HTTP error status: ${response?.status}`);
+class Dog extends Animal {
+	constructor(name, breed) {
+		super(name);
+		this.breed = breed;
+	}
+	speak() {
+		console.log(`${this.name} Barks.`);
 	}
 }
 
-postData('https://api.example.com/submit', { item: 'test' })
-	.then((data) => console.log(data))
-	.catch((err) => console.log(err.message));
+const myAnimal = new Animal('Russian');
+const myDog = new Dog('Rex', 'Germen Shepherd');
+console.log(myDog.speak());
+console.log(myAnimal.speak());
+
+// Static Class:
+class MathHelper {
+	static PI = 3.1416;
+
+	static add(x, y) {
+		return x + y;
+	}
+}
+
+console.log(MathHelper.PI);
+console.log(MathHelper.add(20, 20));
