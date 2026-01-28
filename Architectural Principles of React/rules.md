@@ -589,7 +589,62 @@ setTimeout(callback, delay): Executes a callback function once after a specified
 
 setInterval(callback, delay): Repeatedly executes a callback function with a fixed delay (in milliseconds) between each call. It returns an interval ID which can be used with clearInterval() to stop the repetitions.
 
-19. 
+19. Q: What are static methods and properties in ES6 classes? A: Static methods and properties belong to the class itself, not to instances of the class. They are called directly on the class, not on an instance. They are often utility functions or properties related to the class but not specific to any instance.
+
+class MathHelper {
+    static PI = 3.14159; // Static property (ES2022 proposal, widely supported)
+
+    static add(x, y) { // Static method
+        return x + y;
+    }
+}
+console.log(MathHelper.PI);    // 3.14159
+console.log(MathHelper.add(5, 3)); // 8
+// const helper = new MathHelper();
+// helper.add(1,1) // This would be an error
+
+20. Q: Can you achieve private members in ES6 classes? A: Yes, with ES2022 private class fields:
+
+Private instance fields: Declared with a # prefix (e.g., #myPrivateField). They are only accessible from within the class.
+Private methods: Also declared with a # prefix (e.g., #myPrivateMethod()).
+class Counter {
+    #count = 0; // Private instance field
+
+    constructor(initialCount = 0) {
+        this.#count = initialCount;
+    }
+
+    #increment() { // Private method
+        this.#count++;
+    }
+
+    incrementPublic() {
+        this.#increment();
+    }
+
+    getCount() {
+        return this.#count;
+    }
+}
+
+const c = new Counter(5);
+c.incrementPublic();
+console.log(c.getCount()); // 6
+// console.log(c.#count); // SyntaxError: Private field '#count' must be declared in an enclosing class
+// c.#increment();        // SyntaxError
+
+21. Q: What is method overriding in classes? A: Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. The subclass's method "overrides" the superclass's method for instances of the subclass.
+
+class Animal {
+  speak() { console.log("Animal sound"); }
+}
+class Dog extends Animal {
+  speak() { console.log("Woof!"); } // Overrides Animal's speak
+}
+const dog = new Dog();
+dog.speak(); // Woof!
+
+22. 
 
 ```
 
