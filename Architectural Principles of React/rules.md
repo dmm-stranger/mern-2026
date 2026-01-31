@@ -1,7 +1,7 @@
 # 1. Clean Component Hierarchy (Production-Ready)::
 
 ## 📁 Recommended Folder Structure:
-
+ 
 ```
 src/
 │
@@ -644,7 +644,109 @@ class Dog extends Animal {
 const dog = new Dog();
 dog.speak(); // Woof!
 
-22. 
+22. Q: How do you select an HTML element using JavaScript? (Mention a few ways):
+document.getElementById('elementId')
+document.getElementsByClassName('className')
+document.getElementsByTagName('tagName')
+document.querySelector('cssSelector')
+document.querySelectorAll('cssSelector')
+
+23. Q: What's the difference between an HTMLCollection and a NodeList?:
+HTMLCollection: A live collection of elements. If the DOM changes (e.g., an element is added or removed that matches the collection's criteria), the HTMLCollection updates automatically. It typically contains only Element nodes. Methods like getElementsByClassName and getElementsByTagName return HTMLCollections.
+
+NodeList: Can be live or static.
+document.childNodes is live.
+document.querySelectorAll() returns a static NodeList. This means it's a snapshot of the elements at the time the query was made and doesn't update if the DOM changes.
+NodeLists can contain any node type (Element, Text, Comment nodes), not just Element nodes. Both are array-like but not true arrays (though they have a length property and can be iterated). You can convert them to arrays using Array.from() or the spread operator.
+
+24. Q: How do you add/remove/modify attributes of an HTML element? A:
+element.getAttribute('attributeName')
+element.setAttribute('attributeName', 'value')
+element.removeAttribute('attributeName')
+element.hasAttribute('attributeName')
+
+25. Q: How do you change the content of an HTML element?:
+element.innerHTML
+element.textContent
+element.innerText
+//
+element.innerHTML = "<strong>New content!</strong> This text is now bold.";
+container.textContent = 'Goodbye <em>World</em>';
+paragraph.innerText = "Text has been updated!";
+
+26. Q: How do you add an event listener to an HTML element?: Using element.addEventListener(eventType, listenerFunction, useCaptureOrOptions):
+
+const myButton = document.getElementById('myBtn');
+function handleClick() {
+    console.log('Button clicked!');
+}
+myButton.addEventListener('click', handleClick);
+
+// To remove:
+// myButton.removeEventListener('click', handleClick);
+
+27. Q: What is event bubbling and event capturing? : These are two phases of event propagation in the DOM:
+
+Capturing Phase: When an event occurs on an element, the browser first checks if any ancestors have registered a capturing listener for that event type, starting from the window down to the target element's parent.
+
+Target Phase: The event reaches the target element where it originated.
+
+Bubbling Phase: After the target phase, the event "bubbles" up through the target's ancestors, from the parent up to the window. Listeners registered for bubbling (default) will be triggered. You can control which phase your listener activates in using the third argument of addEventListener. true for capturing, false (or omitted) for bubbling.
+
+28. Q: What is event.preventDefault() and event.stopPropagation()?:
+
+event.preventDefault(): If an event is cancelable (e.g., a form submission, a link click), calling this method prevents the browser's default action associated with that event.
+
+event.stopPropagation(): Prevents further propagation of the current event in the capturing and bubbling phases. The event will not trigger listeners on any other elements further up or down the DOM tree.
+
+29. What is localStorage and sessionStorage and cookies?:
+ans...
+
+30. Q: What are common types of errors in JavaScript?:
+
+SyntaxError: Occurs when the JavaScript engine encounters code that violates the language's syntax rules (e.g., missing parenthesis, invalid keyword usage). Caught during parsing, before execution.
+
+ReferenceError: Occurs when trying to access a variable that has not been declared or is outside the current scope.
+
+TypeError: Occurs when an operation is performed on a value of an inappropriate type (e.g., calling a non-function, accessing properties of null or undefined).
+
+RangeError: Occurs when a numeric variable or parameter is outside its valid range (e.g., invalid array length).
+URIError: Occurs when global URI handling functions (like encodeURIComponent()) are used incorrectly.
+Custom errors can also be created by extending the Error object.
+
+31. Q: What are JavaScript Modules (ES6 Modules)? (import/export) A: ES6 Modules allow you to break your code into separate files (modules) for better organization, reusability, and maintainability.
+
+export: Used to make variables, functions, or classes available from a module to other modules.
+	Named exports: export const myVar = ...; export function myFunc() {...}
+	Default export: export default function myFunc() {...} (only one per module)
+
+import: Used to bring exported members from another module into the current module's scope.
+	Named imports: import { myVar, myFunc } from './myModule.js';
+	Default import: import myDefaultFunc from './myModule.js';
+Namespace import: import * as MyModule from './myModule.js'; Modules are loaded asynchronously in browsers (if using <script type="module">) and have their own scope.
+
+32. Q: What is the Symbol data type? Why might you use it?: Symbol (ES6) is a primitive data type whose instances are unique and immutable. Every Symbol() call returns a new, unique Symbol. Use Cases:
+	Unique Object Property Keys: To create "hidden" or non-enumerable properties on objects that won't collide with string keys (e.g., for metadata or internal properties).
+	Well-known Symbols: JavaScript defines several built-in Symbols (e.g., Symbol.iterator, Symbol.hasInstance) that allow you to customize certain built-in language behaviors for your objects.
+
+
+32. Q: What are some common JavaScript performance optimization techniques? A:
+
+Minimize DOM Manipulation: DOM operations are expensive. Batch updates, use DocumentFragments, or update elements off-DOM.
+Debouncing and Throttling: For event handlers that fire frequently (e.g., scroll, resize, keyup).
+	Debounce: Delays function execution until a certain amount of time has passed without the event firing.
+	Throttle: Ensures a function is called at most once per specified interval.
+Efficient Looping: Use appropriate loops. for loops are often faster than forEach for very large arrays in performance-critical sections.
+Code Splitting / Lazy Loading: Load only the JavaScript needed for the current view/functionality.
+Tree Shaking / Dead Code Elimination: Remove unused code.
+Caching / Memoization: Store results of expensive computations.
+Optimize Images and Assets: Compress images, use appropriate formats.
+Use Web Workers for CPU-intensive tasks.
+Avoid Global Variables: Faster lookup for local variables.
+Minimize Reflows and Repaints: Changing styles or layout can trigger these.
+Use efficient data structures (e.g., Map, Set when appropriate).
+
+33. 
 
 ```
 

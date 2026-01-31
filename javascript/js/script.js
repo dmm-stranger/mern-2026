@@ -348,39 +348,43 @@
 
 // --------------- part 5 ------------------------------
 // OOP && PROTOTYPE:
-// Class:
-class Animal {
-	constructor(name) {
-		this.name = name;
-	}
-	speak() {
-		console.log(`${this.name} Makes a Noise.`);
-	}
-}
+// // Class:
+// class Animal {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// 	speak() {
+// 		console.log(`${this.name} Makes a Noise.`);
+// 	}
+// }
 
-class Dog extends Animal {
-	constructor(name, breed) {
-		super(name);
-		this.breed = breed;
-	}
-	speak() {
-		console.log(`${this.name} Barks.`);
-	}
-}
+// class Dog extends Animal {
+// 	constructor(name, breed) {
+// 		super(name);
+// 		this.breed = breed;
+// 	}
+// 	speak() {
+// 		console.log(`${this.name} Barks.`);
+// 	}
+// }
 
-const myAnimal = new Animal('Russian');
-const myDog = new Dog('Rex', 'Germen Shepherd');
-console.log(myDog.speak());
-console.log(myAnimal.speak());
+// const myAnimal = new Animal('Russian');
+// const myDog = new Dog('Rex', 'Germen Shepherd');
+// console.log(myDog.speak());
+// console.log(myAnimal.speak());
 
-// Static Class:
-class MathHelper {
-	static PI = 3.1416;
+// // Static Class:
+// class MathHelper {
+// 	static PI = 3.1416;
 
-	static add(x, y) {
-		return x + y;
-	}
-}
+// 	static add(x, y) {
+// 		return x + y;
+// 	}
+// }
 
-console.log(MathHelper.PI);
-console.log(MathHelper.add(20, 20));
+// console.log(MathHelper.PI);
+// console.log(MathHelper.add(20, 20));
+
+// --------------- part 6 ------------------------------
+// DOM: Document Object Model::
+console.log('manage Project 11');
