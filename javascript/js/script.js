@@ -387,4 +387,4 @@
 
 // --------------- part 6 ------------------------------
 // DOM: Document Object Model::
-console.log('manage Project 11');
+// console.log('manage Project 11');
