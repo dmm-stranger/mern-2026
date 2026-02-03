@@ -8,23 +8,42 @@
 
 // DOM API: Application Programming Interface::
 // find element using her ID:
+// const navigation = document.getElementById('navigation');
+// console.log(navigation);
+
+// // find element by tagName:
+// const list = document.getElementsByTagName('li');
+// console.log(list);
+// console.log(list.length);
+// console.log(list[2]);
+
+// // find element by className:
+// const parentList = document.getElementsByClassName('parent-list');
+// console.log(parentList);
+
+// // find elements by its first selector querySelector:
+// const firstElement = document.querySelector('.border-e');
+// console.log(firstElement);
+
+// // find elements by using querySelectorAll:\
+// const allElements = document.querySelectorAll('.border-e');
+// console.log(allElements);
+
+// DOM accusable::
 const navigation = document.getElementById('navigation');
-console.log(navigation);
+console.log(document.body);
+// console.log(document.body.innerHTML);
 
-// find element by tagName:
-const list = document.getElementsByTagName('li');
-console.log(list);
-console.log(list.length);
-console.log(list[2]);
+//
+console.log(document.documentElement);
 
-// find element by className:
-const parentList = document.getElementsByClassName('parent-list');
-console.log(parentList);
+//
+console.log(document.embeds);
 
-// find elements by its first selector querySelector:
-const firstElement = document.querySelector('.border-e');
-console.log(firstElement);
-
-// find elements by using querySelectorAll:\
-const allElements = document.querySelectorAll('.border-e');
-console.log(allElements);
+//
+console.log(document.forms);
+console.log(document.head);
+console.log(document.links);
+console.log(document.images);
+console.log(document.scripts);
+console.log(document.title);
