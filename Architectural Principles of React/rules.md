@@ -746,7 +746,19 @@ Avoid Global Variables: Faster lookup for local variables.
 Minimize Reflows and Repaints: Changing styles or layout can trigger these.
 Use efficient data structures (e.g., Map, Set when appropriate).
 
-33. 
+33. HTML objects (and object collections) are also accessible:
+document.anchors
+document.body
+document.documentElement
+document.embeds
+document.forms
+document.head
+document.images
+document.links
+document.scripts
+document.title
+
+34. 
 
 ```
 
