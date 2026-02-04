@@ -42,9 +42,14 @@
         <li class="border-e border-slate-400 px-3">
           <a href="#page">page</a>
         </li>
+        <li id="id1" class="border-e border-slate-400 px-3">
+          <a href="#page">page</a>
+        </li>
+        <button onclick="document.getElementById('id1').style.color = 'red'">button</button>
         <li class="border-e border-slate-400 px-3">
-          <form action="">
-            <input type="text">
+          <form name="myForm" action="" onsubmit="runFormValidation()">
+            Name: <input type="text" name="fname" class="ring-1">
+            <input type="submit" value="Submit">
           </form>
         </li>
       </ul>
@@ -62,7 +67,7 @@
     <section class="col-span-4 content-start bg-green-100 min-h-screen">
       <section class="bg-blue-100 my-24 px-12 grid grid-rows-12 gap-y-12">
         <section class="row-span-4 bg-yellow-200">
-          <img src="https://html5up.net/uploads/demos/future-imperfect/images/logo.jpg" alt="">
+          <img id="section-image" src="https://html5up.net/uploads/demos/future-imperfect/images/logo.jpg" alt="">
           <h1 class="text-bold text-5xl uppercase">Future Imperfect</h1>
           <p class="text-xl text-slate-500">Another fine responsive site template by HTML5 UP</p>
         </section>
