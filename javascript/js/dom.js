@@ -58,23 +58,65 @@ console.log(document.embeds);
 // console.log(logoTitle);
 
 // Change Image Attribute:
-const sectionImg = document.getElementById('section-image');
-console.log(sectionImg);
+// const sectionImg = document.getElementById('section-image');
+// console.log(sectionImg);
 
-sectionImg.src = 'https://www.w3schools.com/js/landscape.jpg';
+// sectionImg.src = 'https://www.w3schools.com/js/landscape.jpg';
 
-// Change CSS:
-const navSection = document.getElementById('navigation');
-console.log(navSection);
+// // Change CSS:
+// const navSection = document.getElementById('navigation');
+// console.log(navSection);
 
-navSection.style.backgroundColor = 'lightyellow';
+// navSection.style.backgroundColor = 'lightyellow';
 
-// action in a form:
-const runFormValidation = () => {
-	let inputName = document.forms['myForm']['fname'].value;
-	console.log(inputName);
-	if (inputName === '') {
-		alert('Input Name is Missing!');
-		return false;
-	}
+// // action in a form:
+// const runFormValidation = () => {
+// 	let inputName = document.forms['myForm']['fname'].value;
+// 	console.log(inputName);
+// 	if (inputName === '') {
+// 		alert('Input Name is Missing!');
+// 		return false;
+// 	}
+// };
+
+// DOM events:
+// // calling with js functions:
+// function callMe() {
+// 	alert('you call me green!');
+// }
+
+// // Mouse events:
+// const logoSec = document.getElementById('header-section-one');
+// const callBack1 = function () {
+// 	logoSec.innerHTML = 'Mouse over';
+// };
+// const callBack2 = function () {
+// 	logoSec.innerHTML = 'Mouse out';
+// };
+// logoSec.addEventListener('mouseover', callBack1);
+// logoSec.addEventListener('mouseout', callBack2);
+
+// // key event:
+// const inputSearch = document.getElementById('k');
+// const callBack = (event) => {
+// 	alert(event?.key);
+// 	alert(event?.code);
+// };
+
+// const callBack2 = (event) => {
+// 	console.log(event?.ctrlKey);
+// };
+
+// inputSearch.addEventListener('keydown', callBack);
+// // inputSearch.addEventListener('keyup', callBack2);
+
+// js event timing:
+const Clock = document.getElementById('clock');
+
+const showTime = () => {
+	const d = new Date();
+	const time = `TIME: ${d.getHours()}: ${d.getMinutes()}: ${d.getSeconds()}`;
+	Clock.innerHTML = time;
 };
+
+setInterval(showTime, 1000);

@@ -48,7 +48,7 @@
         <button onclick="document.getElementById('id1').style.color = 'red'">button</button>
         <li class="border-e border-slate-400 px-3">
           <form name="myForm" action="" onsubmit="runFormValidation()">
-            Name: <input type="text" name="fname" class="ring-1">
+            Name: <input id="k" type="text" name="fname" class="ring-1">
             <input type="submit" value="Submit">
           </form>
         </li>
@@ -150,6 +150,29 @@
 
   <!-- page Footer: -->
   <footer class="py-24 px-12 bg-pink-100">footer here!</footer>
+
+  <section class="bg-blue-50 py-10 px-5">
+    <h1 class="text-xl font-bold">DOM events</h1>
+    <br>
+    <!-- simple event -->
+    <button onclick="alert('A Simple Click Event!')" class="rounded-sm ring-1 ring-red-200 px-6 py-2">simple
+      event...</button>
+
+    <!-- simple click event with innerHTML: -->
+    <h2 class="text-red-600 font-bolder mt-5" id="time">Local Time: </h2>
+    <button class="rounded-sm ring-2 ring-green-200 px-6 py-2"
+      onclick="document.getElementById('time').innerHTML = new Date()">local time...</button>
+
+    <!-- using this reference  -->
+    <button class="text-blue-900 px-6 py-2 ring-2 ring-pink-600" onclick="this.innerHTML = new Date()">local...</button>
+
+    <!-- calling with js functions -->
+    <button class="rounded-sm ring-2 ring-green-500 px-6 py-2" onclick="callMe()">show alert!!</button>
+
+    <!-- timing -->
+    <h1 id="clock" class="text-lg mt-5"></h1>
+
+  </section>
 
 
   <!-- my script javascript: -->
