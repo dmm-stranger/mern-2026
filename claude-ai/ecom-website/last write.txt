@@ -1,0 +1,14 @@
+-----------------------
+search Cloude: 
+-------------------
+Q: What exactly is not working?
+A: No error but @ still not resolving
+---------------------
+npm pakages:
+---------------
+1. npm create vite@latest techstore -- --template react
+2. npm install react-router-dom @reduxjs/toolkit react-redux
+3. npm install lucide-react clsx tailwind-merge class-variance-authority sonner
+4. tailwindcss
+5. shadcn UI
+6. 
