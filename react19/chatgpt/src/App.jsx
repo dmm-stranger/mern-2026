@@ -20,6 +20,7 @@ function App() {
 				<p>conditional component</p>
 				<Comp4></Comp4>
 				<p>state management</p>
+				<p>memorable</p>
 				<State></State>
 			</div>
 		</>
