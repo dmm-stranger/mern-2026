@@ -1,3 +1,4 @@
+import Conditional from "./conditionalRndr/Conditional";
 import CurlyBrs from "./CurlyBrs";
 import Profile2 from "./passingprops/Profile2";
 import Profile from "./Profile";
@@ -8,6 +9,7 @@ export default function Gallery() {
     <Profile />
     <CurlyBrs />
     <Profile2 />
+    <Conditional />
   </>
 }
 
