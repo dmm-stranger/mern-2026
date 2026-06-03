@@ -1,14 +1,11 @@
-function Profile() {
-  return <>
-    <img src="https://react.dev/images/docs/scientists/MK3eW3As.jpg" alt="kterin joe" />
-  </>
-}
+import CurlyBrs from "./CurlyBrs";
+import Profile from "./Profile";
+
 
 export default function Gallery() {
   return <>
     <Profile />
-    <Profile />
-    <Profile />
+    <CurlyBrs />
   </>
 }
 
