@@ -30,11 +30,9 @@ export default function Gallery() {
     <p style={{ backgroundColor: "cyan" }}>component:</p>
 
 
-    {/* 
     <p style={{ backgroundColor: "cyan" }}>component:</p>
 
-
-
+    {/* 
     <p style={{ backgroundColor: "cyan" }}>component:</p>
 
 
