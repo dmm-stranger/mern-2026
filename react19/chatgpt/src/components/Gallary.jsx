@@ -27,7 +27,7 @@ export default function Gallery() {
     <List />
 
 
-    <p style={{ backgroundColor: "cyan" }}>component:</p>
+    <p style={{ backgroundColor: "cyan" }}>HTML to JSX:</p>
 
 
     <p style={{ backgroundColor: "cyan" }}>component:</p>
