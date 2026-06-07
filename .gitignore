@@ -4,3 +4,5 @@
 techstore/
 node_modules/
 **/node_modules/
+
+**/loom/
