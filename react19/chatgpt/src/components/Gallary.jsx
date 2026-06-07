@@ -1,5 +1,6 @@
 import Conditional from "./conditionalRndr/Conditional";
 import CurlyBrs from "./CurlyBrs";
+import HtmlToJsx from "./html-to-jsx/HtmlToJsx";
 import Profile2 from "./passingprops/Profile2";
 import Profile from "./Profile";
 import List from "./renderingList/List";
@@ -28,7 +29,7 @@ export default function Gallery() {
 
 
     <p style={{ backgroundColor: "cyan" }}>HTML to JSX:</p>
-
+    <HtmlToJsx />
 
     <p style={{ backgroundColor: "cyan" }}>component:</p>
 
