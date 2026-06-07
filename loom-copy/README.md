@@ -1,7 +1,7 @@
 # React + TypeScript + 
 # loom: 
 
-- [@vitejs/plugin-react](https://github.com/dmm-stranger/frontend-loom-rect19.git)
+- [frontend: loom](https://github.com/dmm-stranger/frontend-loom-rect19.git)
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
