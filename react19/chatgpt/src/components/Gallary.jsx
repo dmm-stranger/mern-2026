@@ -5,6 +5,13 @@ import Profile2 from "./passingprops/Profile2";
 import Profile from "./Profile";
 import List from "./renderingList/List";
 
+import {
+  RouterProvider,
+} from "react-router";
+import { router } from "./react-router7/app/router";
+import "../index.css"
+
+
 
 export default function Gallery() {
   return <>
@@ -31,7 +38,8 @@ export default function Gallery() {
     <p style={{ backgroundColor: "cyan" }}>HTML to JSX:</p>
     <HtmlToJsx />
 
-    <p style={{ backgroundColor: "cyan" }}>component:</p>
+    <p style={{ backgroundColor: "cyan" }}>react route 7.17:</p>
+    <RouterProvider router={router} />
 
     {/* 
     <p style={{ backgroundColor: "cyan" }}>component:</p>
