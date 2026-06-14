@@ -1,0 +1,21 @@
+App Router
+                     ↓
+          ┌────────────────────┐
+          │   Public Layout     │
+          └────────────────────┘
+                     ↓
+        Home / Products / Login
+                     ↓
+         AuthGuard (Login check)
+                     ↓
+        ┌────────────────────┐
+        │   Private Layout    │
+        └────────────────────┘
+                     ↓
+     Checkout / Account / Orders
+                     ↓
+        RoleGuard (ADMIN check)
+                     ↓
+        ┌────────────────────┐
+        │  Admin Dashboard    │
+        └────────────────────┘

@@ -1,0 +1,49 @@
+src /
+ ├── app /
+ │    └── router.tsx
+ ├── layouts /
+ │    ├── PublicLayout.tsx
+ │    ├── PrivateLayout.tsx
+ │    └── AdminLayout.tsx
+ ├── guards /
+ │    ├── AuthGuard.tsx
+ │    └── RoleGuard.tsx
+ ├── pages /
+ │    ├── Home.tsx
+ │    ├── Products.tsx
+ │    ├── ProductDetail.tsx
+ │    ├── Login.tsx
+ │    ├── Checkout.tsx
+ │    ├── Account.tsx
+ │    └── admin /
+ │         ├── Dashboard.tsx
+ │         ├── Users.tsx
+ │         ├── Orders.tsx
+ │         └── Products.tsx
+
+
+ ---------------------------------
+
+ /                      → Home
+
+/products              → Products
+
+/products/1            → Product Detail
+
+/login                 → Login
+
+/account               → User only
+
+/checkout              → User only
+
+/admin                 → Admin Dashboard
+
+/admin/users           → Users
+
+/admin/orders          → Orders
+
+/admin/products        → Products
+
+-------------------------------------
+
+এটা React Router v7+/Data Router style-এর একটি পরিষ্কার nested + role-based routing foundation। এরপর Redux Toolkit, RTK Query, lazy loading, code splitting, loaders/actions, error boundaries, and permission matrix যোগ করলে এটি বড় e-commerce architecture-এর দিকে যাবে।
