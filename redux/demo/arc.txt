@@ -1,0 +1,75 @@
+Auth System
+Product System
+Cart System
+UI System
+
++
+Redux Toolkit
++
+RTK Query
+
+-----------------------------------
+
+src/
+│
+├── app/
+│   ├── store.ts
+│   └── api/
+│       └── baseApi.ts
+│
+├── features/
+│
+│   ├── auth/
+│   │   ├── authSlice.ts
+│   │   └── authApi.ts
+│   │
+│   ├── products/
+│   │   ├── productsSlice.ts
+│   │   └── productsApi.ts
+│   │
+│   ├── cart/
+│   │   └── cartSlice.ts
+│   │
+│   └── ui/
+│       └── uiSlice.ts
+│
+├── hooks/
+│   └── reduxHooks.ts
+│
+├── pages/
+│   ├── Login.tsx
+│   ├── Products.tsx
+│   └── Cart.tsx
+│
+└── main.tsx
+
+------------------------------------------
+
+User Click Login
+      ↓
+useLoginMutation()
+      ↓
+RTK Query
+      ↓
+Backend API
+      ↓
+Response
+      ↓
+Redux Store
+      ↓
+UI Update
+
+
+---------------------------------------
+
+আর তোমার আগের দেওয়া codeগুলোর সাথে মিলিয়ে দেখলে:
+store.ts → তোমার Redux brain
+baseApi.ts → তোমার RTK Query engine
+authSlice.ts → login state
+productsSlice.ts → filters, pagination
+authApi.ts → login/register API
+productsApi.ts → product fetch API
+useSelector() → store থেকে data read
+dispatch() → store update
+useGetProductsQuery() → auto fetch
+useLoginMutation() → POST request
