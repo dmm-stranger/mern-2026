@@ -41,10 +41,11 @@ export default function Gallery() {
     <p style={{ backgroundColor: "cyan" }}>react route 7.17:</p>
     <RouterProvider router={router} />
 
+
+    <p style={{ backgroundColor: "cyan" }}>react-router 7.17: client</p>
+
+
     {/* 
-    <p style={{ backgroundColor: "cyan" }}>component:</p>
-
-
     <p style={{ backgroundColor: "cyan" }}>component:</p>
 
 
