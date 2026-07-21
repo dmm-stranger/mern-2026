@@ -6,4 +6,8 @@ node_modules/
 **/node_modules/
 
 **/loom/
-**/loom-backend/loom-raw/
+**/loom-backend/
+
+**/school-backend/
+# **/school/
+loom-raw/
